@@ -1,2 +1,2 @@
-# Programacion3-Tarea1
-Repocitorio para hacer el primer proyecto de programación 3, en grupos
+# Programación 3 - Tarea1
+Repositorio para hacer el primer proyecto de programación 3, en grupos
