@@ -1,28 +1,37 @@
 #Importaciones
-from flask import Flask, request
+
+from flask import Flask, request, render_template
 from flask_mysqldb import MySQL
 
 #Conexión a la BD
+
 app = Flask(__name__)
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = 'mysql'
 app.config['MYSQL_DB'] = 'dbprueba'
-mysql = MySQL()
+mysql = MySQL(app)
 
 #Recolección de Datos mediante POST, GET, PUT, DELETE
+
 @app.route('/')
 def Index():
-    return 'Esto es una prueba'
+    return render_template('index.html')
 
-@app.route('/añadir')
+#POST
+
+@app.route('/añadir', methods=['POST'])
 def Añadir():
     return 'Añadiendo'
 
-@app.route('/editar')
+#PUT
+
+@app.route('/editar', methods=['PUT'])
 def Editar():
     return 'Editando'
 
-@app.route('/eliminar')
+#DELETE
+
+@app.route('/eliminar', methods=['DELETE'])
 def Eliminar():
     return 'Eliminando'
