@@ -16,13 +16,13 @@ def Index():
     return 'Esto es una prueba'
 
 @app.route('/añadir')
-def añadir():
+def Añadir():
     return 'Añadiendo'
 
 @app.route('/editar')
-def editar():
+def Editar():
     return 'Editando'
 
 @app.route('/eliminar')
-def eliminar():
+def Eliminar():
     return 'Eliminando'
