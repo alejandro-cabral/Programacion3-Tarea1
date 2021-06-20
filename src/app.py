@@ -35,3 +35,6 @@ def Editar():
 @app.route('/eliminar', methods=['DELETE'])
 def Eliminar():
     return 'Eliminando'
+
+if __name__ == '___main___':
+    app.run(debug=True)
