@@ -135,7 +135,7 @@
 										<thead>
 											<tr>
 												<th>Usuario</th>
-												<th>Password</th>
+												<th>Contraseña</th>
 												<th>Nombre</th>
 												<th>Tipo Usuario</th>
 											</tr>
@@ -143,7 +143,7 @@
 										<tfoot>
 											<tr>
 												<th>Usuario</th>
-												<th>Password</th>
+												<th>Contraseña</th>
 												<th>Nombre</th>
 												<th>Tipo Usuario</th>
 											</tr>

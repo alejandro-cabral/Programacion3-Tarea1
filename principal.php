@@ -56,12 +56,12 @@
                         <div class="nav">
                             <a class="nav-link" href="index.html"
 							><div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard</a
+                                Tablero</a
 							>
 							
 							<?php if($tipo_usuario == 1) { ?>
 								
-								<div class="sb-sidenav-menu-heading">Interface</div>
+								<div class="sb-sidenav-menu-heading">Interfaz</div>
 								<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts"
 								><div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
 									Layouts
@@ -107,56 +107,92 @@
 							</div>
 					</div>
                     <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as:</div>
-                        Start Bootstrap
+                        <div class="small"></div>
+                        
 					</div>
 				</nav>
 			</div>
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                        <h1 class="mt-4">Dashboard</h1>
+                        <h1 class="mt-4">Tablero</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Dashboard</li>
+                            <li class="breadcrumb-item active">Tablero</li>
 						</ol>
+                    <?php if($tipo_usuario == 1) { ?>    
                         <div class="row">
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Primary Card</div>
+                                    <div class="card-body">Empledos aceptados</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <a class="small text-white stretched-link" href="acepemp.php">Ver lista de empleados aceptados</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
 									</div>
 								</div>
 							</div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-warning text-white mb-4">
-                                    <div class="card-body">Warning Card</div>
+                                    <div class="card-body">Editar categorias</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <a class="small text-white stretched-link" href="editemp.php">Editar...</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
 									</div>
 								</div>
 							</div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-success text-white mb-4">
-                                    <div class="card-body">Success Card</div>
+                                    <div class="card-body">Lista de empleados activos</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <a class="small text-white stretched-link" href="actemp.php">Ver lista de empleados activos</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
 									</div>
 								</div>
 							</div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-danger text-white mb-4">
-                                    <div class="card-body">Danger Card</div>
+                                    <div class="card-body">Empleados en espera</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <a class="small text-white stretched-link" href="esperaemp.php">Empleados en espera</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
 									</div>
 								</div>
 							</div>
 						</div>
+                        <?php } ?>
+
+                        <?php if($tipo_usuario == 2) { ?>    
+                        <div class="row">
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-primary text-white mb-4">
+                                    <div class="card-body">Verificacion de acepto de trabajo</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="">Verificar...</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+									</div>
+								</div>
+							</div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-warning text-white mb-4">
+                                    <div class="card-body">Buscar puesto de trabajo</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="">Buscar...</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+									</div>
+								</div>
+							</div>
+
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-danger text-white mb-4">
+                                    <div class="card-body">Postular para trabajo</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="">Postular...</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+									</div>
+								</div>
+							</div>
+						</div>
+                        <?php } ?>
+
                         <div class="row">
                             <div class="col-xl-6">
                                 <div class="card mb-4">
@@ -171,29 +207,31 @@
 								</div>
 							</div>
 						</div>
+
+                        <?php if($tipo_usuario == 1) { ?>
                         <div class="card mb-4">
-                            <div class="card-header"><i class="fas fa-table mr-1"></i>DataTable Example</div>
+                            <div class="card-header"><i class="fas fa-table mr-1"></i>Tabla de personas registradas</div>
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                         <thead>
                                             <tr>
-                                                <th>Name</th>
-                                                <th>Position</th>
-                                                <th>Office</th>
-                                                <th>Age</th>
-                                                <th>Start date</th>
-                                                <th>Salary</th>
+                                                <th>Nombre</th>
+                                                <th>Posición</th>
+                                                <th>Oficio</th>
+                                                <th>Edad</th>
+                                                <th>Fecha de inicio</th>
+                                                <th>Salario</th>
 											</tr>
 										</thead>
                                         <tfoot>
                                             <tr>
-                                                <th>Name</th>
-                                                <th>Position</th>
-                                                <th>Office</th>
-                                                <th>Age</th>
-                                                <th>Start date</th>
-                                                <th>Salary</th>
+                                                <th>Nombre</th>
+                                                <th>Posición</th>
+                                                <th>Oficio</th>
+                                                <th>Edad</th>
+                                                <th>Fecha de inicio</th>
+                                                <th>Salario</th>
 											</tr>
 										</tfoot>
                                         <tbody>
@@ -658,6 +696,7 @@
 								</div>
 							</div>
 						</div>
+                        <?php } ?>
 					</div>
 				</main>
                 <footer class="py-4 bg-light mt-auto">
@@ -665,9 +704,9 @@
                         <div class="d-flex align-items-center justify-content-between small">
                             <div class="text-muted">Copyright &copy; Your Website 2019</div>
                             <div>
-                                <a href="#">Privacy Policy</a>
+                                <a href="#">Políticas de privacidad</a>
                                 &middot;
-                                <a href="#">Terms &amp; Conditions</a>
+                                <a href="#">Terminos &amp; Condiciones</a>
 							</div>
 						</div>
 					</div>

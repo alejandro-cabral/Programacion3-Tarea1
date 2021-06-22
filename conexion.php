@@ -1,5 +1,5 @@
 <?php
 	
-	$mysqli = new mysqli("localhost", "root", "mysql", "sistema");
+	$mysqli = new mysqli("localhost", "root", "", "sistema");
 	
 ?>

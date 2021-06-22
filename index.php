@@ -36,7 +36,7 @@
 			
 			
 			} else {
-			echo "NO existe usuario";
+			echo "No existe usuario";
 		}
 		
 		
